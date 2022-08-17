@@ -1,0 +1,92 @@
+{
+  "name": "vscode-papis",
+  "displayName": "Papis Cite",
+  "description": "",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-papis.openReference",
+    "onCommand:vscode-papis.openDirReference",
+    "onCommand:vscode-papis.editReference",
+    "onCommand:vscode-papis.editNotesReference",
+    "onCommand:vscode-papis.browseReference",
+    "onCommand:vscode-papis.insertCitation"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": [
+      {
+        "title": "Papis",
+        "properties": {
+          "vscode-papis.papisExecutablePath.darwin": {
+            "type": "string",
+            "title": "Darwin",
+            "markdownDescription": "Full path to Papis executable that should be used by the extension."
+          },
+          "vscode-papis.papisExecutablePath.linux": {
+            "type": "string",
+            "title": "Linux",
+            "markdownDescription": "Full path to Papis executable that should be used by the extension. \nExample: \n/usr/bin/papis"
+          },
+          "vscode-papi.defaultLibrary": {
+            "type": "string",
+            "title": "Default Library",
+            "description": "Name of papis library to use. If left blank, then the default library in papis is used."
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": "vscode-papis.openReference",
+        "title": "Papis: Open Reference under Cursor"
+      },
+      {
+        "command": "vscode-papis.openDirReference",
+        "title": "Papis: Open folder of current reference"
+      },
+      {
+        "command": "vscode-papis.editReference",
+        "title": "Papis: Edit info-file of current reference"
+      },
+      {
+        "command": "vscode-papis.editNotesReference",
+        "title": "Papis: Edit notes-file of current reference"
+      },
+      {
+        "command": "vscode-papis.browseReference",
+        "title": "Papis: Browse current reference"
+      },
+      {
+        "command": "vscode-papis.insertCitation",
+        "title": "Papis: Insert citation"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4",
+    "@vscode/test-electron": "^2.1.5"
+  }
+}
