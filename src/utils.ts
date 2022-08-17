@@ -124,7 +124,7 @@ export function getPapisCmd(options: string) {
 			break;
 
 		default:
-			console.error("This platform is not supported yet.");
+			vscode.window.showErrorMessage("This platform is not supported yet.");
 	}
 	if (cmd === undefined) {
 		return "";

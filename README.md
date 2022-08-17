@@ -26,6 +26,6 @@ Please note that the extension is still under active development. Feel free to o
 
 ## Release Notes
 
-### 0.1.0
+### 1.0.0
 
 Initial release of `vscode-papis`.
