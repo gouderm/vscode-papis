@@ -2,7 +2,7 @@
   "name": "vscode-papis",
   "displayName": "Papis Cite",
   "description": "",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "repository": "https://github.com/gouderm/vscode-papis",
   "publisher": "gouderm",
   "engines": {

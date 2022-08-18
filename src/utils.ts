@@ -111,7 +111,7 @@ export function getCurrentRef() {
 }
 
 export function getPapisCmd(options: string) {
-	const configuration = vscode.workspace.getConfiguration('helloworld');
+	const configuration = vscode.workspace.getConfiguration('vscode-papis');
 
 	let cmd: string | undefined;
 	switch (platform) {
@@ -126,7 +126,9 @@ export function getPapisCmd(options: string) {
 		default:
 			vscode.window.showErrorMessage("This platform is not supported yet.");
 	}
-	if (cmd === undefined) {
+
+	if (cmd === undefined || cmd === "") {
+		vscode.window.showErrorMessage("Unconfigured path to Papis-executable.");
 		return "";
 	}
 

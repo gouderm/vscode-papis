@@ -24,8 +24,3 @@ Support for Windows is planned.
 
 Please note that the extension is still under active development. Feel free to open issues on GitHub to address bugs.
 
-## Release Notes
-
-### 1.0.0
-
-Initial release of `vscode-papis`.
