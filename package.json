@@ -2,7 +2,7 @@
   "name": "vscode-papis",
   "displayName": "Papis Cite",
   "description": "",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "https://github.com/gouderm/vscode-papis",
   "publisher": "gouderm",
   "engines": {
@@ -35,7 +35,7 @@
             "title": "Linux",
             "markdownDescription": "Full path to Papis executable that should be used by the extension. \nExample: \n/usr/bin/papis"
           },
-          "vscode-papi.defaultLibrary": {
+          "vscode-papis.defaultLibrary": {
             "type": "string",
             "title": "Default Library",
             "description": "Name of papis library to use. If left blank, then the default library in papis is used."

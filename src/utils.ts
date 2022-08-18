@@ -79,7 +79,6 @@ export function insertCitationAtCursor(ref: string) {
 	}
 
 	let curPos = editor.selection.active;
-	const document = editor.document;
 
 	// Get the word within the selection
 	const { text } = editor.document.lineAt(curPos.line);

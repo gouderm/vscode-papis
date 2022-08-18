@@ -2,6 +2,10 @@
 
 All notable changes to the "vscode-papis" extension will be documented in this file.
 
+## [1.0.3]
+
+- fixes typo reading defaultLibrary
+
 ## [1.0.2]
 
 - fixes bug when reading configuration
